@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Cloud Platform</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #020617;
+}
+nav h2 { color: #38bdf8; }
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+}
+.hero span {
+    color: #38bdf8;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Status */
+.status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #00ffcc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>DevOpsPro</h2>
+    <div>Dashboard | CI/CD | Monitoring</div>
+</nav>
+
+<section class="hero">
+    <h1>🚀 Cloud CI/CD <span>Platform</span></h1>
+    <p>Automate Build, Test & Deploy using Jenkins</p>
+
+    <button class="btn" onclick="deploy()">Run Deployment</button>
+    <div class="status" id="status">Status: Idle</div>
+</section>
+
+<section class="dashboard">
+    <div class="card">
+        <h3>Builds</h3>
+        <p id="builds">12</p>
+    </div>
+
+    <div class="card">
+        <h3>Success Rate</h3>
+        <p id="success">95%</p>
+    </div>
+
+    <div class="card">
+        <h3>Deployments</h3>
+        <p id="deploys">8</p>
+    </div>
+
+    <div class="card">
+        <h3>Active Users</h3>
+        <p id="users">120</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 DevOpsPro | CI/CD Automation</p>
+</footer>
+
+<script>
+function deploy() {
+    let status = document.getElementById("status");
+
+    status.innerText = "⏳ Deploying...";
+    status.style.color = "yellow";
+
+    setTimeout(() => {
+        status.innerText = "✅ Deployment Successful!";
+        status.style.color = "#00ffcc";
+
+        document.getElementById("builds").innerText++;
+        document.getElementById("deploys").innerText++;
+    }, 2000);
+}
+</script>
+
+</body>
+</html>
