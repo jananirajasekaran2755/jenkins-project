@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Solutions</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #020617;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 50px;
+}
+
+input, textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>DevOpsPro</h2>
+    <ul>
+        <li>Home</li>
+        <li>Features</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Automate Your <span>CI/CD Pipeline</span></h1>
+    <p>Jenkins + GitHub + Automation for modern deployments</p>
+    <button class="btn" onclick="deployStatus()">Check Deployment</button>
+    <h3 id="status"></h3>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <div class="card">
+        <h3>⚡ Fast Deployment</h3>
+        <p>Deploy your apps instantly using Jenkins pipelines.</p>
+    </div>
+
+    <div class="card">
+        <h3>🔒 Secure</h3>
+        <p>Integrated GitHub authentication and security.</p>
+    </div>
+
+    <div class="card">
+        <h3>📊 Monitoring</h3>
+        <p>Track builds and deployment status easily.</p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Email"><br>
+    <textarea placeholder="Message"></textarea><br>
+    <button class="btn">Send</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 DevOpsPro | Built with Jenkins CI/CD</p>
+</footer>
+
+<script>
+function deployStatus() {
+    document.getElementById("status").innerText = "✅ Deployment Successful!";
+}
+</script>
+
+</body>
+</html>
